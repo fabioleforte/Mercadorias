@@ -1,0 +1,61 @@
+﻿@model IEnumerable<Desafio.Models.MERCADORIA>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h4>Principal</h4>
+
+<p>
+    @Html.ActionLink("Adicionar uma nova mercadoria", "Adicionar", null, new { @class = "btn btn-primary" })
+</p>
+<table class="table table table-hover">
+    <tr class="active alert-info">
+        <th>
+            @Html.DisplayNameFor(model => model.TipoMercadoria)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantidade)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Preco)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tipo)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoMercadoria)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantidade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Preco)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tipo)
+            </td>
+            <td>
+                @Html.ActionLink("Alterar", "Alterar", new { id = item.CodigoMerc }, new { @class = "btn btn-warning" }) |
+                @Html.ActionLink("Detalhes", "Detalhes", new { id = item.CodigoMerc }, new { @class = "btn btn-info" }) |
+                @Html.ActionLink("Excluir", "Excluir", new { id = item.CodigoMerc }, new { @class = "btn btn-danger" })
+            </td>
+        </tr>
+    }
+
+</table>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

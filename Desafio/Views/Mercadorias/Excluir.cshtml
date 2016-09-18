@@ -1,0 +1,63 @@
+﻿@model Desafio.Models.MERCADORIA
+
+@{
+    ViewBag.Title = "Excluir";
+}
+
+
+<h3 class="alert-danger">Tem certeza que deseja Excluir a Mercadoria?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal active">
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoMercadoria)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoMercadoria)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantidade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quantidade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Preco)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Preco)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tipo)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Excluir" class="btn btn-danger" /> |
+            @Html.ActionLink("Retornar", "Index", null, new { @class = "btn btn-info" })
+        </div>
+    }
+</div>

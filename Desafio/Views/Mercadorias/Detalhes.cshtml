@@ -1,0 +1,57 @@
+﻿@model Desafio.Models.MERCADORIA
+
+@{
+    ViewBag.Title = "Detalhes";
+}
+
+<h4>Detalhes da Mercadoria</h4>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoMercadoria)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoMercadoria)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantidade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quantidade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Preco)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Preco)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tipo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Alterar", "Alterar", new { id = Model.CodigoMerc }, new { @class = "btn btn-warning" }) |
+    @Html.ActionLink("Retornar", "Index", null, new { @class = "btn btn-info" })
+</p>

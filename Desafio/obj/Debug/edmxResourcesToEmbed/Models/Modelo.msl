@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MERCADORIASModelStoreContainer" CdmEntityContainer="MERCADORIASEntitdades">
+    <EntitySetMapping Name="MERCADORIA">
+      <EntityTypeMapping TypeName="MERCADORIASModel.MERCADORIA">
+        <MappingFragment StoreEntitySet="MERCADORIA">
+          <ScalarProperty Name="CodigoMerc" ColumnName="CodigoMerc" />
+          <ScalarProperty Name="TipoMercadoria" ColumnName="TipoMercadoria" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Quantidade" ColumnName="Quantidade" />
+          <ScalarProperty Name="Preco" ColumnName="Preco" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
